@@ -1,0 +1,26 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="eval_struts:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/eval_struts_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="eval_struts/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="eval_struts" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.4" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.6" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.2" />
+          <element id="library" level="project" name="Maven: ognl:ognl:3.1.21" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.8.1" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.11.1" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.9.1" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-jcl:2.9.1" />
+          <element id="library" level="project" name="Maven: org.apache.struts:struts2-core:2.5.20" />
+          <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.28" />
+          <element id="library" level="project" name="Maven: org.javassist:javassist:3.20.0-GA" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
