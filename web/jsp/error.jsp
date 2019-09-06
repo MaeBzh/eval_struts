@@ -6,11 +6,16 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>Eval struts</title>
   </head>
   <body>
-  $END$
-  </body>
+  <s:include value="header.jsp"/>
+
+  <h2><s:text name="nav.error"></s:text></h2>
+
+  <s:include value="footer.jsp"/>
+</body>
 </html>

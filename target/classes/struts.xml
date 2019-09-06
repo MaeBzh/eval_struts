@@ -1,16 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE struts PUBLIC
-        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
-        "http://struts.apache.org/dtds/struts-2.5.dtd">
-<struts>
 
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
     <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
 
-    <package name="fr.imie.struts" namespace="/" extends="struts-default">
+    <package name="default" extends="struts-default">
         <default-action-ref name="index"/>
 
         <action name="index">
-            <result>index.jsp</result>
+            <result>/jsp/index.jsp</result>
+        </action>
+
+        <action name="login"
+                class="fr.imie.struts.actions.LoginAction"
+                method="login">
+            <result name="input">/jsp/auth/login.jsp</result>
+            <result name="success" type="redirectAction">
+                <param name="products_list"/>
+            </result>
+            <result name="error">/jsp/error.jsp</result>
+        </action>
+
+        <action name="logout" class="fr.imie.struts.actions.LoginAction" method="logout">
+            <result>/jsp/index.jsp</result>
+        </action>
+
+        <action name="signin"
+                class="fr.imie.struts.actions.SigninAction"
+                method="signin">
+            <result name="input">/jsp/auth/signin.jsp</result>
+            <result name="success" type="redirectAction">
+                <param name="products_list"/>
+            </result>
+            <result name="error">/jsp/error.jsp</result>
+        </action>
+
+        <action name="users_list"
+                class="fr.imie.struts.actions.UserAction"
+                method="getUsersList">
+            <result name="success">/jsp/user/users_list.jsp</result>
+            <result name="error">/jsp/error.jsp</result>
+        </action>
+
+        <action name="user_details"
+                class="fr.imie.struts.actions.UserAction"
+                method="getUserDetails">
+            <result name="success">../jsp/user/user_details.jsp</result>
+            <result name="error">../jsp/error.jsp</result>
+        </action>
+
+        <action name="products_list"
+                class="fr.imie.struts.actions.ProductAction"
+                method="getProductsList">
+            <result name="success">/jsp/product/products_list.jsp</result>
+            <result name="error">/jsp/error.jsp</result>
+        </action>
+
+        <action name="product_details"
+                class="fr.imie.struts.actions.ProductAction"
+                method="getProductDetails">
+            <result name="success">../jsp/product/product_details.jsp</result>
+            <result name="error">../jsp/error.jsp</result>
         </action>
     </package>
+
 </struts>

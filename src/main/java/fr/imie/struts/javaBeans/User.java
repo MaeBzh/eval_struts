@@ -1,14 +1,15 @@
 package fr.imie.struts.javaBeans;
 
-public class Client {
+public class User {
     private int id;
     private String firstname;
     private String lastname;
     private String password;
     private String email;
-    private String adress;
+    private String address;
+    private boolean isAdmin;
 
-    public Client() {
+    public User() {
     }
 
     public int getId() {
@@ -51,11 +52,19 @@ public class Client {
         this.email = email;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
     }
 }
